@@ -1,0 +1,6 @@
+en:
+  site_settings:
+    ldap_enabled: "Do you want to enable LDAP based authentication"
+    ldap_uri: "URL of LDAP server(eg myldap.com:389)"
+    ldap_searchbase: "search base for LDAP queries"
+    ldap_dn: "Distinguished name used to bind to LDAP"

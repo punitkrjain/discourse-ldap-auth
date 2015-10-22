@@ -1,0 +1,13 @@
+plugins:
+  ldap_enabled:
+    default: false
+    client: true
+  ldap_uri:
+    default: null
+    client: true
+  ldap_searchbase:
+    default: null
+    client: true
+  ldap_dn:
+    default: null
+    client: true

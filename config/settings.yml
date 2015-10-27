@@ -11,3 +11,15 @@ plugins:
   ldap_dn:
     default: null
     client: true
+  ldap_pw:
+    default: null
+    client: true
+  ldap_filter:
+    default: null
+    client: true
+  ldap_uid:
+    default: 'sAMAccountName'
+    client: true
+  ldap_port:
+    default: '389'
+    client: true

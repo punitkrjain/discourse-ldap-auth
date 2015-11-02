@@ -28,7 +28,7 @@ class LdapAuthenticator < ::Auth::Authenticator
 		result.email = data["email"]
 		
 		# want user to be activated based on ldap trust , see OmniauthCallbacksController
-		user_info = User.find_by(username: result.username)
+		user_info = User.find_by(email: result.email)
 		if user_info
 			result.user = user_info
 		else
@@ -64,9 +64,16 @@ class LdapAuthenticator < ::Auth::Authenticator
 end
 
 # regitering auth provider
-auth_provider :title => 'Authenticate with AD',
+auth_provider :title => "Click here to login using LDAP",
     :message => 'Auth',
     :frame_width => 920,
     :frame_height => 800,
     :authenticator => LdapAuthenticator.new
 
+register_css <<CSS
+
+.btn.ldap {
+  background-color: #46698f;
+}
+
+CSS
